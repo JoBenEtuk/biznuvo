@@ -1,0 +1,122 @@
+.home-footer {
+  padding-top: 370px;
+  position: relative;
+  padding-bottom: 100px;
+  &::after {
+    position: absolute;
+    content: "";
+    background: #f5f5f5;
+    height: 434px;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+  }
+  .footer-text {
+    width: 100%;
+    background: $black;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 284px;
+    padding: 0 100px;
+    box-shadow: 0px 70px 70px -80px $black;
+    p {
+      font-weight: 600;
+      font-size: 2.5rem;
+      color: $white;
+      max-width: 600px;
+      width: 100%;
+      .text-red {
+        font-weight: 800;
+      }
+    }
+    .btn {
+      width: 199px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.125rem;
+    }
+  }
+  .border-bottom {
+    margin: 35px 0;
+    border: 1px solid $blue15;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: rgba($black, 0.6);
+  }
+  .footer {
+    margin-top: 50px;
+    display: none;
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: rgba($black, 0.6);
+      }
+    }
+    .footer-bottom {
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: rgba($black, 0.6);
+    }
+  }
+}
+
+@include media("<1200px") {
+  .home-footer {
+    padding-top: 100px;
+  }
+}
+@include media("<tablet") {
+  .home-footer {
+    .footer-text {
+      p {
+        font-size: 1.875rem;
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .home-footer {
+    .footer-text {
+      padding: 0 50px;
+      p {
+        font-size: 1.5rem;
+      }
+    }
+    .border-bottom {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+    .footer {
+      display: block;
+      .border-bottom {
+        display: block;
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .home-footer {
+    .footer-text {
+      padding: 50px;
+      flex-direction: column;
+    }
+  }
+}

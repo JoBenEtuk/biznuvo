@@ -1,0 +1,563 @@
+.admin {
+  .main {
+    .discussions {
+      padding-bottom: 100px;
+      .discussions-explore,
+      .discussions-topics,
+      .discussions-answer,
+      .discussions-top-users {
+        animation: opacity 500ms linear;
+        max-height: 100vh;
+        overflow: auto;
+        padding-bottom: 10rem;
+        &::-webkit-scrollbar {
+          width: 1px;
+        }
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: rgba(0, 123, 183, 0.15);
+        }
+        .head {
+          z-index: 1;
+          position: sticky;
+          top: 0;
+          width: 100%;
+          max-width: 660px;
+          background: #f6fcff;
+          .topics {
+            padding-bottom: 10px;
+            display: flex;
+            .topics-single {
+              white-space: nowrap;
+              cursor: pointer;
+              font-weight: bold;
+              font-size: 1.25rem;
+              color: rgba($black, 0.4);
+              display: flex;
+              align-items: center;
+              margin-right: 35px;
+              position: relative;
+              &:active,
+              &.active {
+                color: $blue;
+                &:after {
+                  position: absolute;
+                  content: "";
+                  width: 74px;
+                  height: 2px;
+                  background: $blue;
+                  bottom: -11px;
+                }
+                span {
+                  background: $red !important;
+                }
+              }
+              span {
+                font-weight: bold;
+                background: #e0e0e0 !important;
+                margin-left: 8px;
+              }
+            }
+          }
+          .scrollable-tags {
+            .select {
+              margin-top: 2rem;
+              .check-boxes {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                overflow: auto;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                  display: none;
+                }
+                .check-container {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  position: relative;
+                  padding: 1px 17px;
+                  margin: 0;
+                  border-radius: 15px;
+                  margin-right: 10px;
+                  width: fit-content;
+                  .checkbox {
+                    left: 3px;
+                    top: 4px;
+                  }
+                  .checkmark {
+                    right: 0;
+                    left: auto;
+                    background-color: $green;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px;
+                    display: none;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      top: 2px;
+                      width: 94%;
+                      right: 0;
+                      border-radius: 15px;
+                      background: url("/assets/img/check\ 1.png");
+                      background-repeat: no-repeat;
+                      background-position: right;
+                    }
+                  }
+                  .checkmark ~ span {
+                    position: relative;
+                    right: 3px;
+                  }
+                  input {
+                    &:checked ~ .checkmark {
+                      display: block;
+                    }
+                    &:checked ~ .checkmark ~ span {
+                      color: $white;
+                    }
+                  }
+                }
+              }
+              .scrollable-nav {
+                cursor: pointer;
+                &.active,
+                &:active {
+                  svg {
+                    path {
+                      fill-opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .discussions-content {
+          padding: 10px;
+          position: relative;
+        }
+        .content {
+          margin-top: 20px;
+          width: 100%;
+          max-width: 608px;
+          height: 202px;
+          background: rgba($white, 0.4);
+          border: 1px solid $blue15;
+          border-radius: 10px;
+          &:active,
+          &.active,
+          &:focus,
+          &:hover {
+            box-shadow: 0px 6px 15px $blue15;
+            background: $white;
+          }
+          &.discussions-answer-content {
+            background: rgba($white, 0.4);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            height: 157px;
+            margin-top: 25px;
+            &:active,
+            &.active,
+            &:focus,
+            &:hover {
+              box-shadow: 0px 6px 15px $blue15;
+              background: $white;
+              border: 1px solid $blue15;
+            }
+            .content-head {
+              padding: 17px;
+              .content-head-left {
+                h3 {
+                  max-width: 415px;
+                  margin-bottom: 10px;
+                  font-weight: 600;
+                  font-size: 0.875rem;
+                }
+                .content-head-details {
+                  width: 110px;
+                }
+              }
+            }
+            .content-bottom {
+              padding: 17px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .bottom-left {
+                display: flex;
+                align-items: center;
+                .text-grey {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 65px;
+                  margin-right: 16px;
+                }
+                small {
+                  font-weight: 700;
+                  font-size: 0.75rem;
+                }
+              }
+            }
+            .bottom-right {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 55px;
+              span {
+                font-weight: bold;
+                font-size: 0.75rem;
+              }
+            }
+          }
+        }
+        .content-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px 15px;
+          .content-head-left {
+            h3 {
+              max-width: 415px;
+              font-weight: 600;
+              font-size: 1rem;
+              color: $black;
+            }
+            .content-head-details {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              img {
+                width: 20px;
+                height: 20px;
+              }
+              .username {
+                font-weight: bold;
+                font-size: 0.75rem;
+                color: rgba($black, 0.5);
+              }
+              .text-blue {
+                span {
+                  font-weight: 500;
+                  font-size: 0.75rem;
+                }
+              }
+            }
+          }
+          .content-head-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            span {
+              font-weight: bold;
+              font-size: 0.75rem;
+            }
+            svg {
+              cursor: pointer;
+            }
+          }
+        }
+        p {
+          padding: 15px;
+          font-size: 0.75rem;
+          color: rgba($black, 0.4);
+        }
+      }
+      .loader-outline {
+        display: block;
+        margin: 30px auto;
+      }
+      .text-body-bottom {
+        padding: 15px 0;
+      }
+    }
+    .col-sm-4 {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .discussions-right {
+      position: sticky;
+      top: 17%;
+      z-index: 5;
+      width: 100%;
+      max-width: 270px;
+      min-width: 216px;
+      height: 467px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      button {
+        width: 100%;
+      }
+      .comments-sort {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2 {
+          font-weight: bold;
+          font-size: 1.5rem;
+          white-space: nowrap;
+        }
+        .dropdown {
+          border: none;
+          width: auto;
+          small {
+            width: 95px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: auto;
+            padding: 0;
+            font-weight: bold;
+            font-size: 12px;
+            background: none;
+          }
+          ul {
+            li {
+              height: auto;
+              width: auto;
+              padding: 0;
+              background: none;
+            }
+          }
+        }
+      }
+      .discussion-users {
+        .user-rank {
+          margin-bottom: 5px;
+          padding: 0 15px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: 55px;
+          border-radius: 5px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &.active,
+          &:hover,
+          &:focus,
+          &:active {
+            background: rgba($black, 0.03);
+          }
+          .user {
+            display: flex;
+            align-items: center;
+            img {
+              margin-right: 10px;
+              width: 30px;
+              height: 30px;
+            }
+            p {
+              font-weight: 600;
+              font-size: 14px;
+              color: rgba($black, 0.8);
+            }
+          }
+          .rank {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50px;
+            span {
+              font-weight: 500;
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.carousel {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.discussions-topics,
+.discussions-answer,
+.discussions-top-users {
+  display: none;
+}
+
+@include media("<=1200px") {
+  .admin {
+    .main {
+      .discussions {
+        &.add-users {
+          .col-sm-4 {
+            display: none !important;
+          }
+          .col-sm-8 {
+            max-width: 100%;
+            flex: 0 0 100%;
+          }
+          .discussions-top-users {
+            .discussions-right {
+              display: flex !important;
+              position: relative;
+              z-index: 1;
+              max-width: 449px;
+              justify-content: flex-start;
+              .comments-sort {
+                justify-content: flex-end;
+                .dropdown {
+                  padding: 15px 0;
+                }
+              }
+            }
+          }
+          .head {
+            .topics {
+              .topics-single {
+                display: flex !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=tablet2x") {
+  .admin {
+    .main {
+      .discussions {
+        &.add-users {
+          .col-sm-4 {
+            display: flex !important;
+          }
+          .col-sm-8 {
+            flex: 0 0 66.666667%;
+            max-width: 66.666667%;
+          }
+          .discussions-top-users {
+            .discussions-right {
+              display: none !important;
+            }
+          }
+          .head {
+            .topics {
+              .open-users {
+                display: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .admin {
+    .main {
+      .discussions {
+        &.add-users {
+          .col-sm-4 {
+            display: none !important;
+          }
+          .col-sm-8 {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding: 0;
+            // position: fixed;
+            // top: 110px;
+            // left: 0px;
+            // right: 0px;
+          }
+          .head {
+            .topics {
+              overflow: auto;
+              &::-webkit-scrollbar {
+                display: none;
+              }
+              .topics-single {
+                display: flex !important;
+              }
+            }
+          }
+        }
+        .discussions-explore,
+        .discussions-topics,
+        .discussions-answer,
+        .discussions-top-users {
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .discussions-right {
+            max-width: 100%;
+            display: flex !important;
+            position: relative;
+            z-index: 1;
+            max-width: 449px;
+            justify-content: flex-start;
+            .comments-sort {
+              justify-content: flex-end;
+              .dropdown {
+                padding: 15px 0;
+              }
+            }
+          }
+          .discussions-content {
+            padding-top: 0;
+          }
+          .content {
+            height: auto !important;
+          }
+          .head {
+            padding: 15px 0;
+            .scrollable-tags {
+              .select {
+                margin-top: 20px;
+                .check-boxes {
+                  position: relative;
+                  #nav-next {
+                    position: absolute;
+                    right: -8px;
+                  }
+                  #nav-prev {
+                    position: absolute;
+                    left: -8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .admin {
+    .main {
+      .discussions {
+        &.add-users {
+          .col-sm-8 {
+            position: fixed;
+            top: 110px;
+            left: 0px;
+            right: 0px;
+            .discussions-explore,
+            .discussions-topics,
+            .discussions-answer,
+            .discussions-top-users {
+              padding-left: 23px;
+              padding-right: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

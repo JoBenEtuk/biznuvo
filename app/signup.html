@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Biznuvo - signup</title>
+
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="assets/components/bootstrap/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/components/animate/animate.css" />
+    <link rel="stylesheet" href="assets/components/slick/slick.css" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+  </head>
+
+  <body class="auth signup">
+
+    <section class="quote">
+      <div class="quote-container">
+      <div class="quote-form">
+        <div class="quote-header">
+            <h2>Get a Quote</h2>
+            <span id="close-quote">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.4099 12.5L17.7099 8.21C17.8982 8.0217 18.004 7.7663 18.004 7.5C18.004 7.2337 17.8982 6.97831 17.7099 6.79C17.5216 6.6017 17.2662 6.49591 16.9999 6.49591C16.7336 6.49591 16.4782 6.6017 16.2899 6.79L11.9999 11.09L7.70994 6.79C7.52164 6.6017 7.26624 6.49591 6.99994 6.49591C6.73364 6.49591 6.47824 6.6017 6.28994 6.79C6.10164 6.97831 5.99585 7.2337 5.99585 7.5C5.99585 7.7663 6.10164 8.0217 6.28994 8.21L10.5899 12.5L6.28994 16.79C6.19621 16.883 6.12182 16.9936 6.07105 17.1154C6.02028 17.2373 5.99414 17.368 5.99414 17.5C5.99414 17.632 6.02028 17.7627 6.07105 17.8846C6.12182 18.0064 6.19621 18.117 6.28994 18.21C6.3829 18.3037 6.4935 18.3781 6.61536 18.4289C6.73722 18.4797 6.86793 18.5058 6.99994 18.5058C7.13195 18.5058 7.26266 18.4797 7.38452 18.4289C7.50638 18.3781 7.61698 18.3037 7.70994 18.21L11.9999 13.91L16.2899 18.21C16.3829 18.3037 16.4935 18.3781 16.6154 18.4289C16.7372 18.4797 16.8679 18.5058 16.9999 18.5058C17.132 18.5058 17.2627 18.4797 17.3845 18.4289C17.5064 18.3781 17.617 18.3037 17.7099 18.21C17.8037 18.117 17.8781 18.0064 17.9288 17.8846C17.9796 17.7627 18.0057 17.632 18.0057 17.5C18.0057 17.368 17.9796 17.2373 17.9288 17.1154C17.8781 16.9936 17.8037 16.883 17.7099 16.79L13.4099 12.5Z" fill="white"/>
+                </svg>
+                Close</span>
+        </div>
+          <form>
+            <div class="form-field">
+                <label class="label" for="full-name">
+                    <span>Full Name</span> <span> <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.16676 0.833374H5.83343L5.50426 4.12921L8.19176 2.19587L9.0251 3.63754L6.00843 5.00004L9.0251 6.36254L8.19176 7.80421L5.50426 5.87087L5.83343 9.16671H4.16676L4.49593 5.87087L1.80843 7.80421L0.975098 6.36254L3.99176 5.00004L0.975098 3.63754L1.80843 2.19587L4.49593 4.12921L4.16676 0.833374Z" fill="#FF9393"/>
+                      </svg>
+                    </span>
+                </label>     
+                <input type="text" placeholder="Enter your name">              
+            </div>
+            <div class="form-field">
+                <label class="label">
+                    <span>Email Address</span> <span> <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.16676 0.833374H5.83343L5.50426 4.12921L8.19176 2.19587L9.0251 3.63754L6.00843 5.00004L9.0251 6.36254L8.19176 7.80421L5.50426 5.87087L5.83343 9.16671H4.16676L4.49593 5.87087L1.80843 7.80421L0.975098 6.36254L3.99176 5.00004L0.975098 3.63754L1.80843 2.19587L4.49593 4.12921L4.16676 0.833374Z" fill="#FF9393"/>
+                      </svg>
+                    </span>
+                </label>     
+                <input type="text" placeholder="Enter mail" value="terry@sunbeam.studio">              
+            </div>
+            <div class="form-field">
+                <label class="label">
+                    <span>Company</span> <span> <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.16676 0.833374H5.83343L5.50426 4.12921L8.19176 2.19587L9.0251 3.63754L6.00843 5.00004L9.0251 6.36254L8.19176 7.80421L5.50426 5.87087L5.83343 9.16671H4.16676L4.49593 5.87087L1.80843 7.80421L0.975098 6.36254L3.99176 5.00004L0.975098 3.63754L1.80843 2.19587L4.49593 4.12921L4.16676 0.833374Z" fill="#FF9393"/>
+                      </svg>
+                    </span>
+                </label>     
+                <input type="text" placeholder="Enter company name">              
+            </div>
+              <div class="form-field">
+                  <label class="label">
+                      <span>Product Interest</span> <span> <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.16676 0.833374H5.83343L5.50426 4.12921L8.19176 2.19587L9.0251 3.63754L6.00843 5.00004L9.0251 6.36254L8.19176 7.80421L5.50426 5.87087L5.83343 9.16671H4.16676L4.49593 5.87087L1.80843 7.80421L0.975098 6.36254L3.99176 5.00004L0.975098 3.63754L1.80843 2.19587L4.49593 4.12921L4.16676 0.833374Z" fill="#FF9393"/>
+                        </svg>
+                      </span>
+                  </label>
+                  <div class="dropdown">
+                      <div class="dropbutton">
+                          <span>Biznuvo Rules</span>
+                          <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"</svg>
+                            <path d="M9.9999 13.3333C9.80519 13.3337 9.6165 13.2658 9.46657 13.1416L4.46657 8.97495C4.29639 8.8335 4.18937 8.63024 4.16905 8.40988C4.14874 8.18953 4.21679 7.97013 4.35824 7.79994C4.49969 7.62976 4.70295 7.52274 4.9233 7.50243C5.14366 7.48211 5.36306 7.55016 5.53324 7.69161L9.9999 11.4249L14.4666 7.82495C14.5518 7.75572 14.6499 7.70403 14.7552 7.67284C14.8605 7.64164 14.9709 7.63157 15.0801 7.64318C15.1892 7.6548 15.2951 7.68788 15.3914 7.74052C15.4878 7.79317 15.5728 7.86434 15.6416 7.94994C15.7179 8.03563 15.7757 8.13615 15.8113 8.24521C15.847 8.35427 15.8598 8.46952 15.8488 8.58374C15.8379 8.69796 15.8034 8.80869 15.7477 8.90899C15.692 9.00928 15.6161 9.09699 15.5249 9.16661L10.5249 13.1916C10.3707 13.2962 10.1858 13.3461 9.9999 13.3333Z" fill="#007BB7"/>
+                            </svg>
+                            </span>
+                      </div>
+                      <ul id="myDropdown" class="dropdown-content">
+                          <div class="border-bottom"></div>
+                          <li>
+                              <span>Rule 1</span>
+                          </li>
+                          <div class="border-bottom"></div>
+                          <li>
+                              <span>Rule 2</span>
+                          </li>
+                          <div class="border-bottom"></div>
+                          <li>
+                              <span>Rule 3</span>
+                          </li>
+                      </ul>
+                    </div>                    
+              </div>
+              <div class="form-field">
+                  <label class="label" for="bio">
+                      <span>Leave Message</span> <span> <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.16676 0.833374H5.83343L5.50426 4.12921L8.19176 2.19587L9.0251 3.63754L6.00843 5.00004L9.0251 6.36254L8.19176 7.80421L5.50426 5.87087L5.83343 9.16671H4.16676L4.49593 5.87087L1.80843 7.80421L0.975098 6.36254L3.99176 5.00004L0.975098 3.63754L1.80843 2.19587L4.49593 4.12921L4.16676 0.833374Z" fill="#FF9393"/>
+                        </svg>
+                      </span>
+                  </label>
+                  <img class="wysiwyg" src="../assets/img/wysiwyg.svg" alt="">
+                  <textarea name="editor"  class="editor" placeholder="Enter description"></textarea>
+                  <!-- <script type="text/javascript">
+                      CKEDITOR.replace( 'editor');
+                  </script> -->
+              </div>
+              <input type="submit" class="btn btn-primary" value="Send Quote">
+          </form>
+      </div>
+      </div>
+    </section>
+    
+    <div class="login-after">
+      <span>
+        <svg
+          width="386"
+          height="496"
+          viewBox="0 0 386 496"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g opacity="0.8">
+            <rect
+              opacity="0.2"
+              x="103.444"
+              y="208.754"
+              width="315.56"
+              height="315.56"
+              rx="25"
+              transform="rotate(-30 103.444 208.754)"
+              fill="url(#paint0_linear)"
+            />
+            <rect
+              opacity="0.2"
+              x="62.9822"
+              y="310.088"
+              width="315.56"
+              height="388.282"
+              rx="25"
+              transform="rotate(-30 62.9822 310.088)"
+              fill="url(#paint1_linear)"
+            />
+            <rect
+              opacity="0.2"
+              x="151.824"
+              y="113.344"
+              width="193.492"
+              height="388.282"
+              rx="25"
+              transform="rotate(-30 151.824 113.344)"
+              fill="url(#paint2_linear)"
+            />
+          </g>
+          <defs>
+            <linearGradient
+              id="paint0_linear"
+              x1="261.224"
+              y1="208.754"
+              x2="261.224"
+              y2="524.314"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#007BB7" />
+              <stop offset="1" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear"
+              x1="220.762"
+              y1="310.088"
+              x2="220.762"
+              y2="698.37"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#007BB7" />
+              <stop offset="1" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="paint2_linear"
+              x1="248.57"
+              y1="113.344"
+              x2="248.57"
+              y2="501.626"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#007BB7" />
+              <stop offset="1" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html"
+            ><img src="/assets/img/logo-blue.png" alt=""
+          /></a>
+          <svg
+            width="2"
+            height="36"
+            viewBox="0 0 2 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="1.1958"
+              y1="35.5"
+              x2="1.1958"
+              y2="0.5"
+              stroke="#007BB7"
+              stroke-opacity="0.15"
+            />
+          </svg>
+          <h3 class="toggle-quote">Get a Quote</h3>
+        </div>
+      </div>
+    </header>
+
+    <main class="login-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 login-left-container">
+            <div class="login-left">
+              <div class="top">
+                <div class="tag">24/7 SUPPORT</div>
+                <h1 class="text-blue">
+                  Get <span class="text-red">Started</span><br/> Today
+                </h1>
+              </div>
+              <img src="/assets/img/signup-hero.png" alt="">
+            </div>
+          </div>
+          <div class="col-sm-6 login-right-container">
+            <div class="login-right">
+              <div class="login-right-text">
+                <p>Get Started!</p>
+                <h2>Create an account</h2>
+              </div>
+
+              <form>
+                <div class="form-field">
+                  <label class="label">
+                    <span>Full Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter full name"
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="label">
+                    <span>Email Address</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter mail"
+                    value="terry@sunbeam.studio"
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="label">
+                    <span>Password</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Enter password"
+                    value="terry@sunbeam.studio"
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="label">
+                    <span>Confirm Password</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Confirm password"
+                    value="terry@sunbeam.studio"
+                  />
+                </div>
+                <a href="../admin/dashboard.html" class="btn btn-secondary">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 16C12.5523 16 13 15.5523 13 15C13 14.4477 12.5523 14 12 14C11.4477 14 11 14.4477 11 15C11 15.5523 11.4477 16 12 16Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M17 8H10V6C10 5.46957 10.2107 4.96086 10.5858 4.58579C10.9609 4.21071 11.4696 4 12 4C12.5304 4 13.0391 4.21071 13.4142 4.58579C13.7893 4.96086 14 5.46957 14 6C14 6.26522 14.1054 6.51957 14.2929 6.70711C14.4804 6.89464 14.7348 7 15 7C15.2652 7 15.5196 6.89464 15.7071 6.70711C15.8946 6.51957 16 6.26522 16 6C16 4.93913 15.5786 3.92172 14.8284 3.17157C14.0783 2.42143 13.0609 2 12 2C10.9391 2 9.92172 2.42143 9.17157 3.17157C8.42143 3.92172 8 4.93913 8 6V8H7C6.20435 8 5.44129 8.31607 4.87868 8.87868C4.31607 9.44129 4 10.2044 4 11V19C4 19.7956 4.31607 20.5587 4.87868 21.1213C5.44129 21.6839 6.20435 22 7 22H17C17.7956 22 18.5587 21.6839 19.1213 21.1213C19.6839 20.5587 20 19.7956 20 19V11C20 10.2044 19.6839 9.44129 19.1213 8.87868C18.5587 8.31607 17.7956 8 17 8ZM12 18C11.4067 18 10.8266 17.8241 10.3333 17.4944C9.83994 17.1648 9.45542 16.6962 9.22836 16.1481C9.0013 15.5999 8.94189 14.9967 9.05764 14.4147C9.1734 13.8328 9.45912 13.2982 9.87868 12.8787C10.2982 12.4591 10.8328 12.1734 11.4147 12.0576C11.9967 11.9419 12.5999 12.0013 13.1481 12.2284C13.6962 12.4554 14.1648 12.8399 14.4944 13.3333C14.8241 13.8266 15 14.4067 15 15C15 15.7956 14.6839 16.5587 14.1213 17.1213C13.5587 17.6839 12.7956 18 12 18Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <span>Create account</span>
+                </a>
+                <small>By Creating an account, you have read and agree with our <strong>Terms of Service</strong>, <strong>Privacy Policy</strong> and.</small>
+                <div class="right-bottom">
+                  <span>Already have an account?</span>
+                  <a href="login.html" class="login-signup">
+                    <span> Login instead</span>
+                    <span>
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.0001 7.49995C10.0003 7.64598 9.94948 7.7875 9.8563 7.89995L6.7313 11.6499C6.62521 11.7776 6.47277 11.8579 6.3075 11.8731C6.14224 11.8883 5.97769 11.8373 5.85005 11.7312C5.72241 11.6251 5.64215 11.4727 5.62691 11.3074C5.61167 11.1421 5.66271 10.9776 5.7688 10.8499L8.5688 7.49995L5.8688 4.14995C5.81688 4.08602 5.77811 4.01246 5.75472 3.9335C5.73132 3.85454 5.72377 3.77173 5.73248 3.68984C5.74119 3.60794 5.766 3.52858 5.80548 3.45631C5.84497 3.38403 5.89835 3.32028 5.96255 3.2687C6.02681 3.21146 6.1022 3.16811 6.184 3.14137C6.2658 3.11462 6.35223 3.10506 6.4379 3.11327C6.52356 3.12149 6.60661 3.1473 6.68183 3.1891C6.75705 3.23091 6.82283 3.28779 6.87505 3.3562L9.8938 7.1062C9.97225 7.22188 10.0097 7.36051 10.0001 7.49995Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/components/jquery/jquery.min.js"></script>
+    <script src="assets/components/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/components/slick/slick.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+  </body>
+</html>

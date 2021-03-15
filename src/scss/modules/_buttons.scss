@@ -1,0 +1,48 @@
+.btn {
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &.btn-primary {
+    background: $blue !important;
+    border-color: $blue !important;
+    color: $white !important;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.875rem;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: #056094 !important;
+    }
+  }
+
+  &.btn-secondary {
+    background: $green !important;
+    border-color: $green !important;
+    color: $white !important;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.875rem;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: #04775c;
+    }
+  }
+
+  // &.disabled {
+  //   background: $text2 !important;
+  //   border-color: $text2 !important;
+  //   color: $white !important;
+  // }
+}

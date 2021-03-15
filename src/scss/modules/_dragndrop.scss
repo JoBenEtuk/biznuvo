@@ -1,0 +1,44 @@
+#drop-area {
+  border-radius: 20px;
+  width: 100%;
+  background: $blue50;
+  border: 1px dashed $blue15;
+  border-radius: 10px;
+  #fileElem {
+    display: none;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    &:hover {
+      background: #ddd;
+    }
+  }
+  #gallery {
+    margin-top: 10px;
+    img {
+      width: 48%;
+      margin-top: 2rem;
+      border-radius: 10px;
+      margin-right: 2%;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include media("<=tablet") {
+  #drop-area {
+    #gallery {
+      img {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
+}

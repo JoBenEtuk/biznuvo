@@ -1,0 +1,174 @@
+.auth {
+  &.login {
+    .forgot-password,
+    .reset-password {
+      z-index: 4;
+      position: fixed;
+      background: rgba(0, 119, 187, 0.7);
+      width: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+      animation: opacity 400ms linear;
+      min-height: 100vh;
+      height: 100%;
+      display: none;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .forgot-password-container {
+        width: 55%;
+        max-width: 750px;
+        min-height: 100vh;
+        margin-left: auto;
+        background-color: #ffffff;
+        height: 1020px;
+        overflow: auto;
+        .forgot-password-header {
+          margin: auto;
+          padding: 2rem 0;
+          max-width: 550px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h2 {
+            font-weight: bold;
+            font-size: 1.5rem;
+          }
+          span {
+            display: flex;
+            align-items: center;
+            width: 95px;
+            height: 35px;
+            background: $red;
+            color: $white;
+            font-weight: bold;
+            font-size: 0.875rem;
+            border-radius: 60px;
+            justify-content: center;
+            cursor: pointer;
+          }
+        }
+        .forgot-password-mail {
+          p {
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: rgba(#222021, 0.7);
+          }
+          form {
+            margin-top: 50px;
+            .form-field {
+              label {
+                margin-bottom: 5px;
+              }
+            }
+            .border-bottom {
+              margin-bottom: 30px;
+            }
+            .success-password {
+              position: relative;
+              bottom: 0;
+              display: flex;
+              align-items: center;
+              max-width: 401px;
+              width: 90%;
+              height: 74px;
+              background: $green60;
+              border-radius: 5px;
+              justify-content: space-evenly;
+              margin: 70px auto 80px auto;
+              span {
+                font-weight: 500;
+                font-size: 0.875rem;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.auth {
+  &.show-password {
+    overflow: hidden;
+    .forgot-password {
+      display: block;
+    }
+  }
+}
+
+.auth {
+  &.show-reset {
+    .reset-password {
+      display: block !important;
+    }
+  }
+}
+
+@include media("<=tablet2x") {
+  .auth {
+    &.login {
+      .forgot-password,
+      .reset-password {
+        .forgot-password-container {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .auth {
+    &.login {
+      .forgot-password,
+      .reset-password {
+        .forgot-password-container {
+          max-width: 100%;
+          width: 100%;
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .auth {
+    .login-after {
+      display: none;
+    }
+    &.login {
+      .forgot-password,
+      .reset-password {
+        .forgot-password-container {
+          .forgot-password-mail {
+            form {
+              .success-password {
+                width: 95%;
+                padding: 10px;
+                span {
+                  svg {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+          .forgot-password-header {
+            h2 {
+              font-size: 1.2rem;
+            }
+            span {
+              width: 80px;
+              height: 27px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

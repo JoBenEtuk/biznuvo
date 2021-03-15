@@ -1,0 +1,36 @@
+$dark-blue: #025680;
+$blue: #007bb7;
+$blue50: rgba($blue, 0.05);
+$blue5: rgba($blue, 0.5);
+$blue15: rgba($blue, 0.15);
+$dark-blue: #025680;
+$red: #ff9393;
+$alt-red: #ff4545;
+$green: #18b28e;
+$green30: rgba($green, 0.3);
+$green10: rgba($green, 0.1);
+$green60: rgba($green, 0.6);
+$black: #000000;
+$yellow: #f2c94c;
+
+$white: #ffffff;
+$white2: #f6fcff;
+$white3: #f5f5f5;
+$white4: #f9f9f9;
+
+$offwhite: #e3e6ea;
+
+$text: #b2b7bc;
+$text2: #898d92;
+
+//RESPONSIVE VARIABLES
+$breakpoints: (
+  phone: 320px,
+  phone2x: 480px,
+  phone3x: 768px,
+  tablet: 992px,
+  tablet2x: 1024px,
+  desktop: 1280px,
+  desktop2x: 1440px,
+  desktop3x: 1680px,
+);

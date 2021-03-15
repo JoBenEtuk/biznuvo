@@ -1,0 +1,99 @@
+.quote {
+  z-index: 4;
+  position: fixed;
+  background: rgba(0, 119, 187, 0.7);
+  width: 100%;
+  animation: slideInRight 300ms linear;
+  min-height: 100vh;
+  display: none;
+  .quote-container {
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .quote-form {
+    max-width: 750px;
+    min-height: 100vh;
+    height: auto;
+    margin-left: auto;
+    background-color: $white;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -21px;
+      bottom: 0;
+      width: 401.27px;
+      height: 400px;
+      background: url("/assets/img/quotes.png");
+      background-repeat: no-repeat;
+    }
+    .quote-header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: $white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 75%;
+      padding: 2rem 0;
+      margin: auto;
+      h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin: 0;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        width: 95px;
+        height: 35px;
+        background: $red;
+        color: $white;
+        font-weight: bold;
+        font-size: 0.875rem;
+        border-radius: 60px;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+    form {
+      padding-bottom: 5rem;
+      width: 75%;
+    }
+  }
+}
+
+.page,
+.auth {
+  &.add-quote {
+    .quote {
+      display: block;
+      animation: slideInRight 300ms linear;
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .quote {
+    .quote-form {
+      .quote-header {
+        h2 {
+          font-size: 1.3rem;
+        }
+        span {
+          width: 85px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,296 @@
+.tickets-add,
+.answer-add {
+  background: rgba(0, 119, 187, 0.7);
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  overflow-y: auto;
+  min-height: 100vh;
+  top: 0;
+  z-index: 6;
+  width: 100%;
+  animation: slideInRight 300ms linear;
+  display: none;
+  .tickets-add-container {
+    max-height: 100vh;
+    overflow: auto;
+    min-height: 100vh;
+    background: $white;
+    width: 50%;
+    right: 0;
+    position: fixed;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .ticket-editor {
+      padding: 3rem;
+      background-color: $white;
+      position: relative;
+      .content {
+        background: rgba(0, 123, 183, 0.05);
+        max-height: 202px;
+        height: auto;
+        margin-bottom: 2rem;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 608px;
+        border: 1px solid $blue15;
+        border-radius: 10px;
+        .content-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px 15px;
+          .content-head-left {
+            h3 {
+              max-width: 415px;
+              font-weight: 600;
+              font-size: 1rem;
+              color: $black;
+            }
+            .content-head-details {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              img {
+                width: 20px;
+                height: 20px;
+              }
+              .username {
+                font-weight: bold;
+                font-size: 0.75rem;
+                color: rgba($black, 0.5);
+              }
+              .text-blue {
+                span {
+                  font-weight: 500;
+                  font-size: 0.75rem;
+                }
+              }
+            }
+          }
+          .content-head-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            span {
+              font-weight: bold;
+              font-size: 0.75rem;
+            }
+            svg {
+              cursor: pointer;
+            }
+          }
+        }
+        p {
+          padding: 15px;
+          font-size: 0.75rem;
+          color: rgba($black, 0.4);
+        }
+      }
+      .ticket-header {
+        padding-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 550px;
+        margin: auto;
+        h2 {
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+        span {
+          display: flex;
+          align-items: center;
+          width: 95px;
+          height: 35px;
+          background: $red;
+          color: $white;
+          font-weight: bold;
+          font-size: 0.875rem;
+          border-radius: 60px;
+          justify-content: center;
+          cursor: pointer;
+        }
+      }
+      .ticket-body {
+        position: relative;
+        .label {
+          font-weight: 800;
+          font-size: 13px;
+          color: rgba($black, 0.5);
+          margin-bottom: 10px;
+          display: flex;
+          span {
+            margin-right: 5px;
+            img {
+              margin-bottom: 4px;
+            }
+          }
+        }
+        .title {
+          margin-bottom: 30px;
+          input {
+            border: none;
+            outline: none;
+            width: 100%;
+            &::placeholder {
+              font-weight: 600;
+              font-size: 1.5rem;
+              color: rgba($black, 0.2);
+            }
+          }
+        }
+        .description {
+          .wysiwyg {
+            margin-bottom: 10px;
+          }
+        }
+        .select {
+          margin-top: 2rem;
+          .check-boxes {
+            display: flex;
+            .check-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              padding: 1px 18px;
+              margin-right: 15px;
+              border-radius: 15px;
+              .checkmark {
+                right: 0;
+                left: auto;
+                background-color: transparent;
+                &:hover {
+                  background-color: transparent;
+                }
+                &::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 5px;
+                  top: 4px;
+                  width: 6px;
+                  height: 10px;
+                  border: solid $white;
+                  border-width: 0px 2px 2px 0;
+                  transform: rotate(45deg);
+                }
+              }
+              .checkmark ~ span {
+                position: relative;
+                right: 3px;
+              }
+              input {
+                right: 0;
+                &:checked ~ .checkmark {
+                  &:after {
+                    display: block;
+                  }
+                }
+              }
+              .checkbox {
+                left: 3px;
+                top: 4px;
+              }
+            }
+          }
+        }
+        .category {
+          margin-top: 2rem;
+        }
+        .attachment {
+          margin-top: 2rem;
+          #drop-area {
+            height: 91px;
+            border: 2px dashed $blue15;
+            &.highlight {
+              border-color: $blue;
+            }
+            .button {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              background: transparent;
+              border: transparent;
+              margin: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100%;
+              span {
+                font-weight: bold;
+                font-size: 0.75rem;
+                color: rgba($black, 0.3);
+              }
+            }
+            #gallery {
+              margin-top: 0;
+            }
+          }
+        }
+        .btn {
+          width: 141px;
+          height: 45px;
+          margin-top: 2rem;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.admin {
+  &.toggle-ticket {
+    .tickets-add {
+      display: block;
+      animation: slideInRight 300ms linear;
+    }
+  }
+}
+
+@include media("<=tablet2x") {
+  .tickets-add,
+  .answer-add {
+    .tickets-add-container {
+      width: 75%;
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .tickets-add,
+  .answer-add {
+    .tickets-add-container {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .tickets-add,
+  .answer-add {
+    .tickets-add-container {
+      .ticket-editor {
+        padding: 2rem;
+        .ticket-header {
+          h2 {
+            font-size: 1.3rem;
+          }
+        }
+        .ticket-body {
+          .select {
+            .check-boxes {
+              overflow: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

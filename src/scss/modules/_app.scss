@@ -1,0 +1,35 @@
+body {
+  box-sizing: content-box;
+  text-rendering: geometricPrecision;
+  font-family: "Public Sans", sans-serif;
+  color: $black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  background: $white4;
+  .section {
+    margin-bottom: 2em;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.nodisplay {
+  display: none !important;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+  outline: none !important;
+}
+
+ul {
+  padding-inline-start: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}

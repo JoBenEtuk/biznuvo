@@ -1,0 +1,237 @@
+.home-about {
+  padding-top: 250px;
+  position: relative;
+  padding-bottom: 200px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 61rem;
+    right: 0;
+    background: url(/assets/img/home-about-after.svg);
+    width: 204px;
+    height: 396px;
+    background-repeat: no-repeat;
+  }
+  .about-text {
+    h3 {
+      font-weight: 600;
+      font-size: 1.75rem;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-weight: 900;
+      font-size: 3.125rem;
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 1rem;
+      color: rgba($black, 0.6);
+      max-width: 348px;
+      width: 100%;
+    }
+  }
+  .about-image {
+    position: relative;
+    flex-wrap: nowrap;
+    top: 180px;
+    .about-cards {
+      &.one {
+        position: relative;
+        top: -8rem;
+        right: -20px;
+        .card {
+          &:nth-child(2) {
+            position: relative;
+            right: 30px;
+            width: 120px;
+            height: 130px;
+          }
+          &:nth-child(3) {
+            position: relative;
+            right: 60px;
+            width: 120px;
+            height: 130px;
+          }
+        }
+      }
+      &.two {
+        position: relative;
+        top: -8rem;
+        left: -20px;
+        .card {
+          &:nth-child(2) {
+            position: relative;
+            left: 30px;
+            width: 120px;
+            height: 130px;
+          }
+          &:nth-child(3) {
+            position: relative;
+            left: 60px;
+            width: 120px;
+            height: 130px;
+          }
+        }
+      }
+      .card {
+        width: 100px;
+        height: 115px;
+        border: 1px solid rgba(0, 123, 183, 0.15);
+        margin-bottom: 25px;
+        box-shadow: 0px 6px 15px rgba(121, 186, 217, 0.15);
+        .card-body {
+          svg {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  .home-about-second {
+    padding-top: 20rem;
+    .about-text {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font-size: 1rem;
+        color: rgba($black, 0.6);
+        max-width: 650px;
+        width: 100%;
+      }
+      svg {
+        margin-top: 60px;
+      }
+    }
+    .about-main {
+      .item {
+        margin-bottom: 30px;
+        svg {
+          margin-bottom: 15px;
+        }
+        h3 {
+          font-weight: bold;
+          font-size: 1.125rem;
+          margin-bottom: 15px;
+        }
+        p {
+          font-size: 0.875rem;
+          color: rgba($black, 0.6);
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}
+
+@include media("<tablet") {
+  .home-about {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    .home-about-first {
+      .about-text {
+        p {
+          max-width: 100%;
+          width: 95%;
+        }
+      }
+      .about-image {
+        display: block;
+        top: 0;
+        .phone-left,
+        .phone,
+        .phone-right,
+        .about-cards {
+          display: none;
+        }
+        .mobile-about-cards {
+          display: flex !important;
+          flex-wrap: wrap;
+          // justify-content: flex-start;
+          justify-content: space-between;
+          margin-top: 30px;
+          .card {
+            width: 120px;
+            height: 110px;
+            padding: 0;
+            margin: 0 30px 30px 0;
+            border: 1px solid rgba(0, 123, 183, 0.15);
+            box-shadow: 0px 6px 15px rgba(121, 186, 217, 0.15);
+            align-items: center;
+            justify-content: center;
+            .card-body {
+              padding: 16px 0;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+    .home-about-second {
+      padding-top: 16rem;
+      .about-text {
+        text-align: left;
+        align-items: flex-start;
+        svg {
+          display: none;
+        }
+      }
+      .about-main {
+        padding-top: 30px;
+        .item {
+          p {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+@include media("<phone3x") {
+  .home-about {
+    padding-top: 200px;
+    &:before {
+      top: 72rem;
+    }
+    .home-about-first,
+    .home-about-second {
+      .about-text {
+        p {
+          max-width: 100%;
+          width: 95%;
+          font-size: 0.875rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+    .home-about-second {
+      padding-top: 18rem;
+    }
+  }
+}
+@include media("<phone2x") {
+  .home-about {
+    padding-top: 170px;
+    .home-about-first,
+    .home-about-second {
+      .about-text {
+        h1 {
+          font-size: 1.875rem;
+        }
+        .about-main {
+          .item {
+            h3 {
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

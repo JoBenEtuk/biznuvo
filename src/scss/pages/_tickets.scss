@@ -1,0 +1,412 @@
+.tickets {
+  background: $white;
+  border: 1px solid $blue15;
+  box-shadow: 0px 6px 15px rgba(121, 186, 217, 0.15);
+  border-radius: 10px;
+  padding: 0;
+  margin-bottom: 100px;
+  .modals-main {
+    .modals-show {
+      right: 23%;
+    }
+  }
+  .tickets-head {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 35px;
+    input {
+      background: $blue50;
+      border-radius: 10px;
+      position: relative;
+      border: none;
+      outline: none !important;
+      height: 45px;
+      padding-left: 50px;
+      width: 76%;
+      &::placeholder {
+        font-weight: 500;
+        font-size: 12px;
+        color: rgba($black, 0.2);
+        position: relative;
+      }
+      &.active ~ .search,
+      &:active ~ .search,
+      &:focus-within ~ .search {
+        display: none;
+      }
+    }
+    .search {
+      position: absolute;
+      left: 50px;
+      top: 24px;
+    }
+    .filter-line {
+      position: absolute;
+      right: 21.5rem;
+    }
+    .tickets-head-filter {
+      position: absolute;
+      right: 15rem;
+      top: 24px;
+      display: flex;
+      width: 5.5rem;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        font-weight: bold;
+        font-size: 0.875rem;
+        color: $blue;
+      }
+      p {
+        padding: 1px 5px;
+        border-radius: 100%;
+        background: $red;
+        color: $white;
+        font-size: 10px;
+      }
+    }
+    .tickets-head-right {
+      padding: 10px;
+      width: 141px;
+      height: 45px;
+      background: $blue;
+      border-radius: 10px;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      cursor: pointer;
+      img {
+        position: relative;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+  }
+  .tickets-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 35px;
+    height: 60px;
+    background: rgba($black, 0.03);
+    label {
+      font-weight: bold;
+      font-size: 1.125rem;
+      color: rgba($black, 0.4);
+    }
+  }
+  .ticket-body {
+    .ticket-content {
+      padding: 20px 0;
+      .ticket-content-left {
+        display: flex;
+        justify-content: space-between;
+        .ticket-content-left-text {
+          h1 {
+            font-weight: 600;
+            font-size: 1rem;
+            color: $black;
+          }
+          p {
+            font-size: 0.75rem;
+            margin-bottom: 4px;
+            color: rgba($black, 0.4);
+          }
+          h3 {
+            margin-bottom: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              white-space: nowrap;
+              font-weight: 600;
+              font-size: 0.75rem;
+              color: $white;
+              border-radius: 10px;
+              text-align: center;
+            }
+            strong {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+      .ticket-content-right {
+        .ticket-agent {
+          display: flex;
+          align-items: center;
+          img {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+          }
+          .address {
+            p {
+              font-weight: 500;
+              font-size: 0.875rem;
+              margin-bottom: -8px;
+            }
+            .text-blue {
+              font-size: 0.625rem;
+              font-weight: 600;
+            }
+          }
+        }
+        .ticket-stat1,
+        .ticket-stat2,
+        .ticket-stat3,
+        .ticket-stat4,
+        .ticket-stat5 {
+          display: flex;
+          justify-content: space-between;
+          &.invoice-edit-tags {
+            .invoice-edit {
+              display: block;
+              animation: opacity 300ms linear;
+            }
+          }
+          svg {
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            &:hover,
+            &:active,
+            &.active {
+              background: #f2f2f2;
+              border-radius: 20px;
+            }
+          }
+          .status {
+            font-weight: bold;
+            font-size: 0.875rem;
+            width: fit-content;
+            padding: 4px 10px;
+            border-radius: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=1190px") {
+  .tickets {
+    .modals-main {
+      .modals-show {
+        right: unset;
+      }
+    }
+    .tickets-head {
+      input {
+        width: 70%;
+      }
+      .tickets-head-filter {
+        right: 14rem;
+      }
+    }
+    .ticket-body {
+      .ticket-content {
+        .col-lg-6 {
+          max-width: 100%;
+          flex: 0 0 90%;
+        }
+        .ongoing {
+          display: none;
+        }
+      }
+    }
+    .tickets-label {
+      display: none;
+    }
+  }
+}
+
+@include media("<=tablet2x") {
+  .tickets {
+    .tickets-head {
+      input {
+        width: 80%;
+        max-width: 80%;
+      }
+    }
+    .ticket-body {
+      .ticket-content {
+        .col-lg-6 {
+          max-width: 50%;
+          flex: 0 0 50%;
+        }
+        .ongoing {
+          display: block;
+        }
+      }
+    }
+    .ongoing {
+      display: block;
+    }
+  }
+}
+
+@include media("<=990px") {
+  .tickets {
+    .tickets-head {
+      input {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .tickets {
+    .modals-main {
+      .modals-show {
+        margin: auto;
+        right: 0;
+        left: 0;
+      }
+    }
+    .tickets-head {
+      display: block;
+      .tickets-head-filter {
+        width: 5.5rem;
+      }
+      .filter-line {
+        right: 13rem;
+        top: 24px;
+      }
+      input {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+      .tickets-head-filter {
+        right: 60px;
+        width: 8rem;
+      }
+      .tickets-head-right {
+        width: 100%;
+        justify-content: center;
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+    .ticket-body {
+      .ticket-content {
+        .col-lg-6 {
+          max-width: 100%;
+          flex: 0 0 90%;
+        }
+        .ongoing {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .tickets {
+    .tickets-head {
+      padding: 10px 14px;
+      .filter-line {
+        right: 9rem;
+        top: 21px;
+      }
+      .tickets-head-filter {
+        width: 5.5rem;
+        top: 20px;
+        right: 40px;
+      }
+      .search {
+        left: 25px;
+        top: 20px;
+      }
+    }
+    .ticket-body {
+      .ticket-content {
+        .row {
+          margin: 0 !important;
+        }
+        .ticket-content-left {
+          img {
+            width: 40px !important;
+            height: 40px !important;
+            margin-right: 7px !important;
+          }
+          .ticket-content-left-text {
+            h1 {
+              font-size: 0.9rem;
+            }
+            h3 {
+              span {
+                font-size: 0.65rem;
+              }
+              .web,
+              .text-blue {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media("<=400px") {
+  .tickets {
+    .tickets-head {
+      .filter-line {
+        right: 7.5rem;
+      }
+      .tickets-head-filter {
+        width: 5rem;
+        right: 30px;
+      }
+    }
+    .ticket-body {
+      .ticket-content {
+        .ticket-content-left {
+          img {
+            width: 35px !important;
+            height: 35px !important;
+          }
+        }
+      }
+    }
+    .modals-main {
+      .modals {
+        .modal-container {
+          .col-lg-4 {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media(">=desktop2x") {
+  .tickets {
+    .tickets-head {
+      input {
+        width: 81%;
+      }
+    }
+  }
+}
+
+@include media(">=desktop3x") {
+  .tickets {
+    .tickets-head {
+      input {
+        width: 83%;
+      }
+    }
+  }
+}

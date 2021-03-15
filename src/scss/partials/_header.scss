@@ -1,0 +1,167 @@
+.page {
+  &.scroll {
+    .header {
+      padding: 2rem 0;
+      background: $white;
+      position: sticky;
+      z-index: 3;
+      top: 0;
+      width: 100%;
+      box-shadow: 0px 6px 15px rgba(121, 186, 217, 0.15);
+      animation: dropdown 500ms linear;
+      .main-nav {
+        .right {
+          .toggle-quote {
+            color: $blue;
+          }
+        }
+        .container {
+          .left {
+            a {
+              color: $dark-blue !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .header {
+    padding: 3rem 0 4rem 0;
+    background: $blue50;
+    .main-nav {
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 616px;
+          width: 60%;
+          a {
+            font-weight: 600;
+            font-size: 1rem;
+          }
+        }
+        .right {
+          width: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          a {
+            font-weight: bold;
+            font-size: 1rem;
+            color: $white;
+          }
+          .btn-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 177px;
+            height: 40px;
+            padding: 0 25px;
+            font-size: 0.875rem;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+    .navbar,
+    .navbar-bg {
+      display: none;
+    }
+    .navbar-bg {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      height: auto;
+      animation: slideInLeft 300ms linear;
+      background: $blue15;
+      z-index: 1;
+      .navbar-menu {
+        background: $dark-blue;
+        box-shadow: 0px 4px 30px -5px $dark-blue;
+        width: 70%;
+        padding: 2.5rem;
+        .head {
+          margin-bottom: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .content {
+          .navbar-nav {
+            .nav-item {
+              margin-bottom: 1.5rem;
+              a {
+                font-weight: 600;
+                font-size: 1.25rem;
+              }
+            }
+          }
+          .btn {
+            width: 100%;
+            max-width: 360px;
+            height: 45px;
+            margin: 20px 0;
+            align-items: center;
+            padding: 0;
+            justify-content: center;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+@include media("<=tablet") {
+  .page {
+    .header {
+      padding: 20px 0;
+      .navbar {
+        padding: 0;
+        display: flex !important;
+      }
+      .main-nav {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .page {
+    .header {
+      .navbar-bg {
+        .navbar-menu {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .page {
+    .header {
+      .navbar-bg {
+        .navbar-menu {
+          width: 100%;
+          .head {
+            #close-navbar {
+              width: 75px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+}

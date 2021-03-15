@@ -1,0 +1,360 @@
+.admin {
+  font-family: "Public Sans" !important;
+  position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .border-bottom {
+    border-bottom: 1px solid $blue15 !important;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+  }
+  &.addlive {
+    .livechat {
+      display: block;
+      animation: slideInRight 300ms linear;
+    }
+    .main {
+      position: fixed;
+    }
+  }
+  .dashboard {
+    .tickets {
+      &.image {
+        margin-bottom: 30px;
+        color: $white;
+        height: 186px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 22px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        .ticket-top {
+          display: flex;
+          justify-content: space-between;
+          .ticket-top-left {
+            h3 {
+              font-weight: 600;
+              font-size: 1rem;
+              margin: 0;
+              img {
+                opacity: 0.6;
+              }
+            }
+            small {
+              font-weight: 500;
+              font-size: 0.625rem;
+              background: rgba($white, 0.3);
+              border-radius: 5px;
+              padding: 7px;
+              border-radius: 5px;
+            }
+          }
+          .ticket-top-right {
+            font-size: 2.25rem;
+          }
+        }
+        .ticket-bottom {
+          display: flex;
+          align-items: center;
+          span {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+            svg {
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+      &.text {
+        margin-bottom: 5rem;
+        border: 1px solid rgba(0, 123, 183, 0.15);
+        box-shadow: 0px 6px 15px rgba(121, 186, 217, 0.15);
+        border-radius: 10px;
+        .text-head {
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          h2 {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: rgba($black, 0.4);
+          }
+          a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: $blue;
+            text-decoration: none !important;
+          }
+        }
+        .text-body {
+          .text-body-content {
+            padding: 20px;
+            display: flex;
+            img {
+              width: 60px;
+              height: 60px;
+              margin-right: 5%;
+            }
+            .text-body-main {
+              width: 340px;
+              h3 {
+                font-weight: 600;
+                font-size: 1rem;
+                margin-bottom: 0;
+              }
+              p {
+                font-size: 0.75rem;
+                color: rgba($black, 0.4);
+              }
+              small {
+                font-weight: bold;
+                font-size: 0.75rem;
+                color: rgba($black, 0.4);
+              }
+            }
+          }
+          .loader-outline {
+            margin: 10px auto 30px auto;
+            display: block;
+          }
+        }
+      }
+    }
+    .activities {
+      .image {
+        height: 186px;
+        align-items: flex-end;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        .tickets-ongoing,
+        .tickets-resolved {
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 47%;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 174px;
+          color: $white;
+          padding: 20px;
+          img {
+            opacity: 0.7;
+          }
+          h3 {
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+          }
+          h2 {
+            font-weight: bold;
+            font-size: 1.875rem;
+            text-align: right;
+          }
+        }
+      }
+      .activities-text {
+        .activities-text-head {
+          display: flex;
+          justify-content: space-between;
+          .activities-text-head-right,
+          .activities-text-head-left {
+            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            width: 47%;
+            height: 102px;
+            background: $white;
+            border: 1px solid rgba(0, 123, 183, 0.15);
+            border-left: 2px solid $yellow;
+            border-radius: 10px;
+            padding: 13px;
+            h3 {
+              display: flex;
+              justify-content: space-between;
+              span {
+                font-size: 1.563rem;
+                color: $blue;
+              }
+            }
+            h4 {
+              font-weight: bold;
+              font-size: 14px;
+              color: rgba($black, 0.4);
+            }
+          }
+        }
+        .activities-text-main {
+          position: relative;
+          padding: 3rem 0;
+          label {
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: rgba($black, 0.4);
+          }
+          .dotted-line {
+            position: absolute;
+            left: 17px;
+            top: 116px;
+          }
+          .activities-text-content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 27px;
+            svg,
+            img {
+              margin-right: 20px;
+              z-index: 1;
+            }
+            .text-content {
+              h4 {
+                font-weight: 500;
+                font-size: 0.875rem;
+              }
+              p {
+                span {
+                  font-size: 0.75rem;
+                }
+                .text-red {
+                  margin-right: 10px;
+                }
+                strong {
+                  font-size: 0.75rem;
+                  font-weight: bold;
+                  color: rgba($black, 0.3);
+                }
+              }
+            }
+          }
+        }
+        .activities-text-foot {
+          margin-bottom: 6rem;
+          font-weight: 500;
+          font-size: 1rem;
+          color: $blue;
+          cursor: pointer;
+          &:hover {
+            svg {
+              animation: shakeRight 1000ms alternate;
+            }
+          }
+        }
+        .activities-aside {
+          svg {
+            position: fixed;
+            bottom: 40px;
+            right: 30px;
+            animation: tada 1000ms linear;
+            animation-iteration-count: 2;
+            cursor: pointer;
+            &:hover {
+              animation: tada 1000ms linear;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.text-body-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  .text-body-bottom-left {
+    span {
+      font-weight: 500;
+      font-size: 0.625rem;
+      color: rgba($black, 0.4);
+      svg {
+        cursor: pointer;
+      }
+      &:hover {
+        span {
+          svg {
+            animation: shakeUp 1000ms alternate;
+          }
+        }
+      }
+      strong {
+        color: $blue;
+        font-size: 0.625rem;
+      }
+    }
+  }
+  .text-body-bottom-right {
+    span {
+      font-size: 0.625rem;
+      color: rgba($black, 0.4);
+      cursor: pointer;
+      font-weight: 700;
+      margin-right: 4px;
+      &:active,
+      &.active {
+        color: $blue;
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .invoice-add {
+    .invoice-decide {
+      .invoice-delete-confirm {
+        width: 70%;
+        max-width: 100%;
+      }
+    }
+  }
+  .admin {
+    .dashboard {
+      .tickets {
+        &.image {
+          margin-bottom: 10px;
+        }
+        &.text {
+          .text-body {
+            .text-body-content {
+              img {
+                width: 45px;
+                height: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .invoice-add {
+    .invoice-delete {
+      .invoice-delete-container {
+        .invoice-delete-confirm {
+          .invoice-delete-main {
+            .text-alt-red {
+              font-size: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

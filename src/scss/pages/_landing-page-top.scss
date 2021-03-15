@@ -1,0 +1,300 @@
+.page {
+  position: relative;
+  .landing-page {
+    overflow: hidden;
+    .landing-hero {
+      background: $blue50;
+      padding-bottom: 10rem;
+      .hero-after {
+        position: absolute;
+        background: linear-gradient(180deg, $blue 0%, $dark-blue 76.46%);
+        width: 40%;
+        max-height: 130vh;
+        min-height: 900px;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+      .home-hero-footer {
+        margin-top: 7rem;
+        .top {
+          margin-bottom: 25px;
+          display: flex;
+          align-items: center;
+          span {
+            font-weight: bold;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: rgba($black, 0.4);
+            margin-right: 10px;
+            white-space: nowrap;
+            svg {
+              width: 300px;
+            }
+          }
+        }
+        .bottom {
+          width: 468px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          opacity: 0.3;
+        }
+      }
+      .landing-hero-left {
+        h1 {
+          font-weight: 900;
+          font-size: 3.125rem;
+          line-height: 130%;
+          margin-bottom: 35px;
+        }
+        p {
+          font-size: 1.125rem;
+          line-height: 155%;
+          opacity: 0.8;
+          width: 468px;
+          margin-bottom: 35px;
+        }
+        .home-input {
+          position: relative;
+          max-width: 468px;
+          width: 100%;
+          input {
+            background: $blue50;
+            border: 1px solid $blue15;
+            border-radius: 15px;
+            height: 56px;
+            padding-left: 20px;
+            max-width: 468px;
+            width: 100%;
+            outline: none !important;
+            &::placeholder {
+              font-weight: bold;
+              font-size: 0.875rem;
+              color: rgba($black, 0.3);
+            }
+          }
+          a {
+            position: absolute;
+            right: 6px;
+            top: 8px;
+            width: 141px;
+            height: 40px;
+            font-weight: bold;
+            font-size: 0.875rem;
+            padding: 9px;
+          }
+        }
+      }
+      .landing-hero-right {
+        position: relative;
+        height: 100%;
+        min-height: 76vh;
+        .quote-img {
+          width: 123%;
+          position: relative;
+          right: 95px;
+        }
+        .hero-quote {
+          position: relative;
+          margin-top: 4rem;
+          margin-left: 4rem;
+          display: flex;
+          align-items: flex-start;
+          &::after {
+            content: "";
+            position: absolute;
+            background: url("/assets/img/home-quote-after.svg");
+            width: 319.13px;
+            height: 245px;
+            top: -55px;
+          }
+          .img {
+            display: flex;
+            align-items: center;
+            svg {
+              margin: 0 25px;
+            }
+          }
+          .text {
+            h2 {
+              line-height: 155%;
+              width: 250px;
+              font-style: italic;
+              font-weight: bold;
+              font-size: 1.125rem;
+              color: rgba($white, 0.8);
+            }
+            small {
+              font-weight: bold;
+              font-size: 0.875rem;
+              color: rgba($white, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media(">=desktop2x") {
+  .page {
+    .container {
+      max-width: 1280px;
+    }
+  }
+}
+
+@include media("<=1200px") {
+  .page {
+    &::after {
+      width: 41%;
+    }
+    .landing-page {
+      .landing-hero {
+        .landing-hero-right {
+          .quote-img {
+            width: 130%;
+          }
+          .hero-quote {
+            .img {
+              svg {
+                margin: 0px 5px;
+              }
+            }
+          }
+        }
+        .landing-hero-left {
+          h1 {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=tablet2x") {
+  .page {
+    .landing-page {
+      .landing-hero {
+        padding-bottom: 4rem;
+      }
+    }
+  }
+}
+
+@include media("<=tablet") {
+  .page {
+    .landing-page {
+      .landing-hero {
+        .hero-after {
+          display: none;
+        }
+        .container {
+          .row {
+            max-height: 100%;
+            height: auto;
+          }
+        }
+        .landing-hero-left {
+          min-height: unset;
+          .home-hero-footer {
+            display: none;
+          }
+          h1 {
+            font-size: 3.25rem;
+          }
+        }
+        .landing-hero-right {
+          min-height: unset;
+          position: unset;
+          .quote-img,
+          .hero-quote {
+            display: none;
+          }
+          .quote-img2 {
+            display: block !important;
+            width: 100%;
+            margin-top: 40px;
+          }
+          .home-hero-footer {
+            position: unset;
+            bottom: 0;
+            display: block !important;
+            margin-top: 30px;
+            .top {
+              span {
+                &:first-child {
+                  margin: 0;
+                  width: 189px;
+                  height: 39px;
+                  background: #f6fcff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 0 20px;
+                }
+                svg {
+                  width: 100%;
+                }
+              }
+            }
+            .bottom {
+              width: 100%;
+              flex-wrap: wrap;
+              span {
+                padding: 0 10px 10px 0;
+                &:last-child {
+                  padding-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .page {
+    .landing-page {
+      .landing-hero {
+        .landing-hero-left {
+          h1 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .page {
+    .landing-page {
+      .landing-hero {
+        padding-bottom: 0;
+        .landing-hero-left {
+          h1 {
+            font-size: 1.625rem;
+          }
+          p {
+            width: 100%;
+            font-size: 0.875rem;
+            max-width: 286px;
+          }
+          .home-input {
+            a {
+              width: 110px;
+            }
+          }
+        }
+        .home-hero-footer {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

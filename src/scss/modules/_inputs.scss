@@ -1,0 +1,135 @@
+.check-boxes {
+  .check-container {
+    outline: none !important;
+    border: none !important;
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: rgba($black, 0.6);
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .checkmark {
+        background-color: $white;
+        &:after {
+          content: url(/assets/img/checkbox.svg);
+        }
+      }
+    }
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 18px;
+      width: 18px;
+      border-radius: 3px;
+      background-color: rgba($black, 0.1);
+      &:hover {
+        background-color: rgba($black, 0.2);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+form {
+  margin: auto;
+  max-width: 550px;
+  .form-field {
+    margin-bottom: 35px;
+    .label {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+      font-size: 0.813rem;
+      color: rgba($black, 0.5);
+      padding-bottom: 10px;
+      span {
+        margin-right: 5px;
+      }
+    }
+    input,
+    textarea {
+      font-weight: bold;
+      font-size: 0.825rem;
+      color: rgba($black, 0.8);
+      width: 100%;
+      border: none;
+      outline: none !important;
+      padding: 24px;
+      background: $blue50;
+      border-radius: 10px;
+      height: 56px;
+      &::placeholder {
+        font-weight: bold;
+        font-size: 0.825rem;
+        color: rgba($black, 0.5);
+      }
+      &:hover {
+        svg {
+          animation: shakeUp 1000ms alternate;
+        }
+      }
+    }
+    textarea {
+      height: 160px;
+    }
+  }
+}
+
+.editor,
+.editor1,
+.editor2 {
+  background: rgba(0, 123, 183, 0.05);
+  border: none;
+  outline: none;
+  height: 160px;
+  width: 100%;
+  position: relative;
+  border: 1px solid rgba(0, 123, 183, 0.15);
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px 0 0 10px;
+  z-index: 2;
+  &::placeholder {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: rgba($black, 0.3);
+  }
+}
+.wysiwyg {
+  width: 100% !important;
+  max-width: 430px;
+  display: block;
+}
+
+@include media("<=phone3x") {
+  .wysiwyg {
+    width: 100% !important;
+    max-width: 400px;
+  }
+}
+
+@include media("<=phone2x") {
+  .wysiwyg {
+    width: 100% !important;
+    max-width: 350px;
+  }
+}

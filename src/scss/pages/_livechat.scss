@@ -1,0 +1,362 @@
+.livechat {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  animation: slideInRight 300ms linear;
+  display: none;
+  background: rgba($blue, 0.5);
+  height: 100vh;
+  .livechat-content-container {
+    max-height: 100vh;
+    right: 0;
+    position: fixed;
+    background: $white2;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    width: 45%;
+    max-width: 512px;
+    overflow: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .livechat-content {
+      height: 100%;
+      .livechat-support {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 35px;
+        height: 259px;
+        border: 1px dashed rgba($blue, 0.3);
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: $white2;
+        &::after {
+          content: "";
+          position: absolute;
+          background: url("/assets/img/livechat-after.svg");
+          background-repeat: no-repeat;
+          width: 303px;
+          right: 0;
+          height: 259px;
+          top: 0;
+          z-index: -1;
+        }
+        .livechat-top {
+          display: flex;
+          justify-content: space-between;
+          .left {
+            h2 {
+              font-weight: bold;
+              font-size: 1.5rem;
+              color: $black;
+              margin-bottom: 1rem;
+            }
+            h4 {
+              font-weight: bold;
+              font-size: 0.875rem;
+              color: rgba($black, 0.5);
+            }
+          }
+          .right {
+            width: 95px;
+            height: 35px;
+            background: $red;
+            color: $white;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+        }
+        .livechat-bottom {
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 20px;
+          }
+          .bottom-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            p {
+              font-weight: 500;
+              font-size: 1.125rem;
+            }
+            .text-blue {
+              font-weight: 600;
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+      .livechat-dialogue {
+        height: 100%;
+        background: rgba($dark-blue, 0.03);
+        padding: 30px 40px;
+        font-size: 0.875rem;
+        .message-admin {
+          width: 338px;
+          display: block;
+          margin-right: auto;
+          margin-bottom: 20px;
+          .typing {
+            display: flex;
+            align-items: center;
+            p {
+              color: rgba($black, 0.5);
+              font-weight: 600;
+              font-size: 0.75rem;
+              margin-left: 10px;
+            }
+          }
+          strong {
+            margin-left: 3.5rem;
+          }
+          div {
+            display: flex;
+          }
+          .message-timestamp {
+            margin-left: 3.5rem;
+            font-weight: 600;
+            font-size: 12px;
+            color: rgba($black, 0.5);
+            text-align: left;
+          }
+          img {
+            width: 40px;
+            height: 40px;
+          }
+          .message-content {
+            width: fit-content;
+            color: rgba($black, 0.7);
+            position: relative;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: $white;
+            text-align: left;
+            border-radius: 10px;
+            text-align: left;
+            &:after {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-top: 15px solid $white;
+              border-left: 15px solid transparent;
+              border-right: 15px solid transparent;
+              top: 0;
+              left: -10px;
+            }
+          }
+        }
+
+        .message-customer {
+          margin-bottom: 20px;
+          width: 338px;
+          display: block;
+          margin-left: auto;
+          .dialogue-docx {
+            width: fit-content;
+            position: relative;
+            right: 1rem;
+            margin-bottom: 7px;
+            display: block;
+            margin-left: auto;
+          }
+          .message-timestamp {
+            font-weight: 600;
+            font-size: 12px;
+            color: rgba($black, 0.5);
+            text-align: right;
+          }
+          .message-content {
+            width: fit-content;
+            color: $white;
+            position: relative;
+            right: 1rem;
+            margin-bottom: 7px;
+            padding: 10px;
+            background-color: $green;
+            border: 1px solid $green;
+            border-radius: 10px;
+            display: block;
+            margin-left: auto;
+            text-align: right;
+            &.img {
+              padding: 4px;
+              &:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-bottom: 7px solid #18b28e;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                bottom: -1px;
+                right: -7px;
+              }
+            }
+            &.mini {
+              &:after {
+                content: none;
+              }
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-bottom: 15px solid #18b28e;
+              border-left: 15px solid transparent;
+              border-right: 15px solid transparent;
+              bottom: -1px;
+              right: -10px;
+            }
+          }
+        }
+      }
+      .input {
+        right: 0;
+        height: 6rem;
+        bottom: 0;
+        background: $white2;
+        padding-top: 16px;
+        max-width: 512px;
+        position: sticky;
+        width: 100%;
+        input {
+          left: 44px;
+          background: $blue50;
+          border: 1px solid $blue15;
+          outline: none;
+          height: 65px;
+          width: 80%;
+          max-width: 420px;
+          display: flex;
+          align-items: center;
+          border-radius: 10px;
+          position: relative;
+          padding-left: 20px;
+          &::placeholder {
+            color: rgba($black, 0.3);
+          }
+        }
+        .navigation-icon {
+          position: absolute;
+          top: 36px;
+          right: 67px;
+        }
+        .attach-icon {
+          position: absolute;
+          top: 36px;
+          right: 130px;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=tablet2x") {
+  .livechat {
+    .livechat-content-container {
+      width: 60%;
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .livechat {
+    .livechat-content-container {
+      width: 100%;
+      max-width: 100%;
+      .livechat-content {
+        .input {
+          max-width: 100%;
+          input {
+            max-width: 100%;
+            width: 90%;
+          }
+        }
+        .livechat-dialogue {
+          .message-customer,
+          .message-admin {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .livechat {
+    .livechat-content-container {
+      .livechat-content {
+        .input {
+          .navigation-icon {
+            right: 40px;
+          }
+          .attach-icon {
+            right: 80px;
+          }
+          input {
+            left: 22px;
+          }
+        }
+        .livechat-support {
+          width: 100%;
+          height: 180px;
+          padding: 25px;
+          &::after {
+            height: 180px;
+            width: 270px;
+          }
+          .livechat-top {
+            .left {
+              h2 {
+                font-size: 1.2rem;
+              }
+            }
+          }
+          .livechat-bottom {
+            img {
+              width: 43px;
+            }
+            .bottom-text {
+              p {
+                &:first-child {
+                  font-size: 1rem;
+                  position: absolute;
+                  left: 23px;
+                  bottom: 0;
+                }
+              }
+            }
+          }
+        }
+        .input {
+          position: fixed;
+        }
+        .livechat-dialogue {
+          height: 140%;
+          .message-customer,
+          .message-admin {
+            width: 90%;
+            .dialogue-docx {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,364 @@
+.admin {
+  .main {
+    .resources {
+      .resources-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .nav-item {
+          position: relative;
+          margin-bottom: 10px;
+          cursor: pointer;
+          white-space: nowrap;
+          margin-right: 15px;
+          span {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: rgba($black, 0.4);
+            svg {
+              position: relative;
+              bottom: 3px;
+              opacity: 0.25;
+              path {
+                fill: black;
+              }
+            }
+          }
+          &:active,
+          &.active {
+            &:after {
+              content: "";
+              position: absolute;
+              width: 121px;
+              height: 2px;
+              background-color: $blue;
+              bottom: -11px;
+              left: 0;
+            }
+            span {
+              color: $blue;
+              svg {
+                opacity: 1;
+                path {
+                  fill: $blue;
+                }
+              }
+            }
+          }
+        }
+      }
+      .downloads-row,
+      .articles-row,
+      .case-studies-row,
+      .videos-row {
+        display: none;
+      }
+      .row {
+        margin-top: 25px;
+        animation: opacity 500ms linear;
+        .resources-item {
+          position: relative;
+          margin-bottom: 22px;
+          img {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+          }
+          .item-text {
+            padding: 16px;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .bottom {
+              display: flex;
+              align-items: flex-end;
+              justify-content: space-between;
+              .left {
+                h2 {
+                  font-weight: 600;
+                  font-size: 1rem;
+                  color: $white;
+                }
+                h1 {
+                  font-weight: bold;
+                  font-size: 1.625rem;
+                  color: $white;
+                }
+                p {
+                  font-weight: 500;
+                  font-size: 0.75rem;
+                  color: rgba($white, 0.5);
+                  display: flex;
+                  align-items: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      .videos-row {
+        .videos-lg {
+          .resources-item {
+            height: 200px;
+            position: relative;
+            &:after {
+              content: "";
+              background: url("/assets/img/play-circle-outline\ 1.svg");
+              position: absolute;
+              width: 35px;
+              height: 35px;
+              right: 100px;
+              top: 88px;
+            }
+          }
+        }
+        .videos-lg-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-bottom: 10px;
+          margin-top: 13px;
+          height: 175px;
+          h2 {
+            font-weight: 600;
+            font-size: 1rem;
+          }
+          p {
+            width: 440px;
+            font-size: 0.75rem;
+            color: rgba($black, 0.4);
+          }
+          .trans-blue {
+            width: 50px;
+          }
+        }
+      }
+      .downloads-row {
+        .download-time {
+          h3 {
+            font-weight: 800;
+            font-size: 0.875rem;
+            color: rgba($black, 0.5);
+            white-space: nowrap;
+          }
+          .col-lg-10 {
+            display: block;
+            margin-top: auto;
+          }
+        }
+        .download-content {
+          .row {
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            .col-icon {
+              width: 11%;
+              svg {
+                width: 100%;
+              }
+            }
+            .download-details-col {
+              width: 86%;
+            }
+            .download-details {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .left {
+                h2 {
+                  font-weight: 600;
+                  font-size: 1rem;
+                  color: $black;
+                  margin-bottom: 15px;
+                }
+                .span {
+                  display: flex;
+                  justify-content: space-between;
+                  width: 200px;
+                  align-items: center;
+                  .text-grey {
+                    font-weight: bold;
+                    font-size: 0.75rem;
+                  }
+                }
+              }
+              .right {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span {
+                  .text-blue {
+                    font-weight: 500;
+                    font-size: 0.875rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.trans-red {
+  padding: 2px 5px;
+  height: 19px;
+  background: rgba(255, 147, 147, 0.35);
+  border-radius: 5px;
+  color: $white;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.trans-green {
+  background: rgba(24, 178, 142, 0.3);
+  border-radius: 5px;
+  padding: 2px 5px;
+  height: 19px;
+  color: $white;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.trans-green01 {
+  background: $green;
+  border-radius: 5px;
+  padding: 2px 5px;
+  height: 19px;
+  color: $white;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.trans-blue {
+  background: rgba(0, 123, 183, 0.5);
+  border-radius: 5px;
+  padding: 2px 5px;
+  height: 19px;
+  color: $white;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@include media("<=desktop") {
+  .admin {
+    .main {
+      .resources {
+        .row {
+          .resources-item {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .admin {
+    .main {
+      .resources {
+        .resources-nav {
+          overflow: hidden;
+          overflow-x: auto;
+          &::-webkit-scrollbar {
+            height: 0;
+          }
+          .nav-item {
+            white-space: nowrap;
+            margin-right: 22px;
+          }
+        }
+        .videos-row {
+          .videos-lg-text {
+            p {
+              width: 100%;
+            }
+          }
+          .videos-lg {
+            justify-content: unset;
+            .resources-item {
+              height: auto;
+              display: flex;
+              &:after {
+                right: 0;
+                top: 78px;
+                left: 0;
+                margin: auto;
+              }
+              img {
+                height: unset;
+              }
+            }
+          }
+        }
+        .downloads-row {
+          .download-content {
+            .row {
+              margin-left: 0;
+              margin-right: 0;
+              .download-details {
+                .right {
+                  span {
+                    .text-blue {
+                      display: none;
+                    }
+                    svg {
+                      margin-right: 15px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .download-time {
+            .row {
+              margin-left: 0;
+              margin-right: 0;
+            }
+          }
+        }
+        .row {
+          .resources-item {
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .admin {
+    .main {
+      .resources {
+        .videos-row {
+          .videos-lg {
+            .resources-item {
+              img {
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

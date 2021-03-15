@@ -1,0 +1,366 @@
+.home-support {
+  padding: 200px 0 400px 0;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    background: url("/assets/img/home-support-after.svg");
+    background-repeat: no-repeat;
+    width: 1262px;
+    height: 1650px;
+    z-index: -1;
+    top: 50px;
+    right: 0;
+  }
+  .support-left-top {
+    margin-bottom: 110px;
+    h1 {
+      font-weight: 900;
+      font-size: 3.125rem;
+      width: 70%;
+      max-width: 750px;
+    }
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 2.125rem;
+    margin-bottom: 20px;
+  }
+  .support-left {
+    .support-left-main {
+      h2 {
+        margin-bottom: 70px;
+      }
+      .accordion-container {
+        .accordion {
+          margin-bottom: 30px;
+          cursor: pointer;
+          h3 {
+            font-weight: 600;
+            font-size: 1.25rem;
+            text-transform: capitalize;
+            color: rgba($black, 0.8);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            span {
+              &:first-child {
+                width: 75%;
+              }
+            }
+          }
+          h3[aria-expanded="true"] {
+            .beforeActive {
+              display: none;
+            }
+            .onActive {
+              display: inline-block;
+            }
+          }
+          h3[aria-expanded="false"] {
+            .beforeActive {
+              display: inline-block;
+            }
+            .onActive {
+              display: none;
+            }
+          }
+          p {
+            font-size: 1rem;
+            color: rgba($black, 0.6);
+          }
+        }
+      }
+      a {
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+  }
+  .support-right {
+    max-width: 420px;
+    width: 100%;
+    position: absolute;
+    top: 43rem;
+    right: 9rem;
+    h2 {
+      font-weight: 600;
+      margin-bottom: 25px;
+      font-size: 2.125rem;
+      color: $white;
+    }
+    .support-right-top {
+      .card {
+        width: 100%;
+        background: $white;
+        border: 1px solid $blue15;
+        box-shadow: 0px 6px 15px $blue15;
+        border-radius: 10px;
+        display: block;
+        text-align: left;
+        margin-left: auto;
+        margin-bottom: 25px;
+        .card-body {
+          align-items: unset;
+          padding: 30px 18px;
+          .card-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            span {
+              margin-right: 13px;
+              font-weight: bold;
+              font-size: 1.125rem;
+            }
+          }
+          .card-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            svg {
+              opacity: 0.2;
+              &:hover,
+              &:active,
+              &.active,
+              &:focus {
+                opacity: 1;
+                path {
+                  fill: $blue;
+                }
+              }
+            }
+            h5 {
+              font-weight: 600;
+              margin-bottom: 0;
+              font-size: 16px;
+              color: rgba($black, 0.8);
+            }
+            span {
+              font-weight: 500;
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+    }
+    .support-right-bottom {
+      h2 {
+        margin-top: 55px;
+      }
+      p {
+        max-width: 350px;
+        width: 100%;
+        font-size: 1rem;
+        color: rgba($white, 0.6);
+        line-height: 155%;
+        margin-bottom: 25px;
+      }
+      a {
+        width: 177px;
+        padding: 0.6rem 0.75rem;
+      }
+    }
+  }
+}
+
+@include media("<=desktop") {
+  .home-support {
+    .support-left {
+      .support-left-main {
+        .accordion-container {
+          .accordion {
+            h3 {
+              .onActive,
+              .beforeActive {
+                margin-right: 6% !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<1200px") {
+  .home-support {
+    padding: 150px 0 300px 0;
+    &::after {
+      top: 0;
+      right: 0;
+      background: $blue;
+      width: 50%;
+      height: 100%;
+    }
+    .support-left-top {
+      h1 {
+        width: 50%;
+        font-size: 2.875rem;
+      }
+    }
+    .support-right {
+      display: none;
+      &.one {
+        top: unset;
+        right: 0;
+        display: block !important;
+      }
+    }
+  }
+}
+
+@include media("<=tablet") {
+  .home-support {
+    padding: 150px 0 50px 0;
+    &::after {
+      display: none;
+    }
+    .support-left {
+      margin-bottom: 100px;
+      .support-left-main {
+        h2 {
+          margin-bottom: 50px;
+        }
+        .accordion-container {
+          .accordion {
+            h3 {
+              .onActive,
+              .beforeActive {
+                margin-right: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .support-right {
+      padding: 100px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: unset;
+      right: unset;
+      padding: 100px 0;
+      max-width: 100%;
+      background: $blue;
+      &.one {
+        top: unset;
+        right: 0;
+        display: none !important;
+      }
+      .support-right-top,
+      .support-right-bottom {
+        max-width: 720px;
+        padding: 0 15px;
+        width: 100%;
+        .card {
+          .card-body {
+            .card-content {
+              width: 90%;
+              flex-wrap: wrap;
+              svg {
+                margin: 0 10px 10px 0;
+              }
+            }
+            .card-title {
+              max-width: 90%;
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+    }
+    .support-left-top {
+      margin-bottom: 80px;
+      h1 {
+        width: 100%;
+        max-width: 600px;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .home-support {
+    .support-left-top {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    .support-right {
+      .support-right-top,
+      .support-right-bottom {
+        max-width: 540px;
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .home-support {
+    .support-right {
+      .support-right-top,
+      .support-right-bottom {
+        max-width: 100%;
+      }
+    }
+    .support-left-top {
+      margin-bottom: 70px;
+      h1 {
+        font-size: 1.875rem;
+      }
+    }
+    .support-left {
+      .support-left-main {
+        h2 {
+          font-size: 1.5rem;
+        }
+        .accordion-container {
+          .accordion {
+            h3 {
+              span:first-child {
+                width: 85%;
+                font-size: 1rem;
+              }
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=576px") {
+  .home-support {
+    .support-right {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .support-right-top,
+      .support-right-bottom {
+        max-width: 100%;
+        .card {
+          .card-body {
+            .card-content {
+              .row {
+                .col-sm-6 {
+                  display: flex;
+                  flex-direction: column;
+                  &:first-child {
+                    margin-bottom: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

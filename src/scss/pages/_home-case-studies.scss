@@ -1,0 +1,281 @@
+.home-case-studies {
+  background: rgba($blue, 0.03);
+  padding: 150px 0;
+  .container {
+    position: relative;
+    .case-studies-head {
+      text-align: center;
+      max-width: 550px;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 100px;
+      display: block;
+      h1 {
+        font-weight: 800;
+        font-size: 3.125rem;
+      }
+      p {
+        font-size: 1rem;
+        color: rgba($black, 0.6);
+      }
+    }
+    .slick-dots {
+      display: flex !important;
+      justify-content: center;
+      padding-top: 2.5rem;
+      cursor: pointer;
+      li {
+        list-style-type: none;
+        img:nth-child(2) {
+          display: block;
+        }
+        img:nth-child(1) {
+          display: none;
+        }
+        &.slick-active {
+          img:nth-child(2) {
+            display: none;
+          }
+          img:nth-child(1) {
+            display: block;
+          }
+        }
+      }
+    }
+    .case-studies-body {
+      outline: none;
+      width: 100%;
+      background: $white;
+      border: 1px solid $blue15;
+      box-sizing: border-box;
+      box-shadow: 0px 6px 50px -30px $blue15;
+      padding: 100px;
+      margin: auto;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 554px;
+        height: 701px;
+        z-index: 1;
+        background: url("/assets/img/home-case-studies-after.svg");
+        background-repeat: no-repeat;
+        bottom: 0;
+        right: 0;
+      }
+      .case-studies-content {
+        z-index: 2;
+        position: relative;
+        .case-studies-content-top {
+          h2 {
+            font-weight: 800;
+            font-size: 2rem;
+            margin-bottom: 20px;
+          }
+          p {
+            width: 100%;
+            max-width: 510px;
+            font-size: 1rem;
+            color: rgba($black, 0.6);
+            margin-bottom: 30px;
+          }
+        }
+        .accordion {
+          margin-bottom: 20px;
+          a {
+            font-weight: bold;
+            font-size: 1.125rem;
+            outline: none;
+          }
+          a[aria-expanded="true"] {
+            .beforeActive {
+              display: none;
+            }
+            .onActive {
+              display: inline-block;
+            }
+          }
+          a[aria-expanded="false"] {
+            .beforeActive {
+              display: inline-block;
+            }
+            .onActive {
+              display: none;
+            }
+          }
+          .collapse {
+            ul {
+              padding-top: 5px;
+              li {
+                margin-top: 10px;
+                span {
+                  font-weight: 500;
+                  font-size: 1rem;
+                  color: rgba($black, 0.6);
+                  svg {
+                    margin-right: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .case-studies-nav {
+      position: absolute;
+      top: 16rem;
+      right: 4rem;
+      .case-prev,
+      .case-next {
+        opacity: 0.4;
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+        background: $white;
+        border: 2px solid rgba(0, 123, 183, 0.15);
+        box-shadow: 0px 6px 15px rgb(121 186 217 / 15%);
+        padding: 16px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:hover,
+        &:active,
+        &.active,
+        &:focus {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .home-case-studies {
+    padding: 100px 0;
+    .container {
+      .case-studies-head {
+        max-width: 350px;
+        margin-bottom: 75px;
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 0.875rem;
+        }
+      }
+      .case-studies-body {
+        &::after {
+          opacity: 0.7;
+        }
+        padding: 60px;
+        .case-studies-content {
+          .case-studies-content-top {
+            h2 {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+      .case-studies-nav {
+        top: 13rem;
+        right: 3rem;
+        .case-prev,
+        .case-next {
+          width: 45px;
+          height: 45px;
+          padding: 0;
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .home-case-studies {
+    .container {
+      .case-studies-head {
+        max-width: 320px;
+        margin-bottom: 50px;
+        h1 {
+          font-size: 1.875rem;
+        }
+        p {
+          font-size: 0.75rem;
+        }
+      }
+      .case-studies-body {
+        &::after {
+          opacity: 0.5;
+        }
+        padding: 30px;
+        .case-studies-content {
+          .case-studies-content-top {
+            h2 {
+              font-size: 1.25rem;
+            }
+            p {
+              font-size: 0.875rem;
+            }
+          }
+          .accordion {
+            a {
+              font-size: 0.875rem;
+            }
+            .collapse {
+              ul {
+                li {
+                  span {
+                    font-size: 0.75rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .case-studies-nav {
+        top: 10rem;
+        right: 2rem;
+        .case-prev,
+        .case-next {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}
+@include media("<=380px") {
+  .home-case-studies {
+    .container {
+      .case-studies-body {
+        padding: 20px;
+        .case-studies-content {
+          .case-studies-content-top {
+            h2 {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      .case-studies-nav {
+        top: 14.5rem;
+        .case-prev,
+        .case-next {
+          width: 28px;
+          height: 28px;
+          svg {
+            width: 13px;
+            height: 13px;
+          }
+        }
+      }
+    }
+  }
+}

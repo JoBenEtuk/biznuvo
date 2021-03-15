@@ -1,0 +1,19 @@
+.card {
+  width: 164px;
+  background: $white;
+  box-shadow: 0px 10px 15px -6px rgba($blue15, 0.15);
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  .card-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.25rem 1rem;
+    .card-text {
+      font-weight: bold;
+      font-size: 1rem;
+      color: $blue;
+    }
+  }
+}
